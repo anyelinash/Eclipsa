@@ -1,0 +1,209 @@
+body{
+    color:#fff;
+  background: radial-gradient(ellipse at bottom, #1C2837 0%, #050608 100%);
+  background-attachment:fixed;
+}
+
+.satelite {
+    height: 35px;
+    width: 35px;
+    background: url('/img/satelite.png') no-repeat center center;
+    background-size: cover;
+  }
+
+.luna {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    border-radius: 50%;
+    background: url(../img/mapaluna.png);
+    background-size: cover;}
+    .luna::before,
+    .luna::after {
+        content: "";
+        display: none; 
+        position: absolute;
+        top: 0;
+    }
+    .luna::before {
+        left: 80px; 
+        background-color: rgba(255, 68, 68, 0.7); 
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 30px;
+        color: white;
+        font-weight: bold;
+        content: "";
+    }
+    .luna::after {
+        left: 80px;
+        top: 40px; 
+        background-color: rgba(0, 0, 255, 0.7); 
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 30px;
+        color: white;
+        font-weight: bold;
+        content: "";
+    }
+    
+    .luna:hover::before,
+    .luna:hover::after {
+        display: block; /* Muestra los botones al pasar el ratón */
+    }
+
+.tierra {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 50%;
+    box-shadow: -27px -27px 0 -7px rgba(0, 0, 0, .15) inset,
+                -10px -10px 0 0 rgba(0, 0, 0, .1) inset,
+                0px 0px 0 0 rgba(255, 255, 255, .2) inset;
+    background: url(../img/mapa.png);
+    background-size: cover;
+    animation: tierra-girando 5s infinite linear; /* Combina ambas animaciones */}
+
+@keyframes tierra-girando {
+    0% {
+        background-position: 0 center;
+    }
+    100% {
+        background-position: -398px center;
+    }
+}
+.tierra:hover {
+    animation-play-state: paused;
+}
+@keyframes moverCometa {
+    0% {
+        top: 0;
+        left: -90px;
+    }
+    100% {
+        top: 90%;
+        left: 90%;
+
+    }
+}
+
+.cometa {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: -40px;
+    background: url('/img/cometa.png') no-repeat center center;
+    background-size: cover;
+    animation: moverCometa 10s infinite linear;
+}
+.cometa:hover {
+    animation-play-state: paused;
+}
+
+.estrella {
+	width: 3px;
+	height: 3px;
+	background: rgba(230, 230, 230, 0.4);
+	border-radius: 50%;
+	position: absolute;
+}
+
+.estrella.impar {
+	-webkit-animation: estrella-impar 2s infinite;
+}
+
+.estrella.par {
+	-webkit-animation: estrella-par 2s infinite;
+}
+
+.primera {
+	left: 20%;
+	top: 20%;
+}
+
+.segunda {
+	left: 40%;
+	top: 30%;
+}
+.tercera {
+	left: 70%;
+	top: 40%;
+}
+.cuarta {
+	left: 90%;
+	top: 10%;
+}
+.quinta {
+	left: 10%;
+	top: 60%;
+}
+.sexta {
+	left: 80%;
+	top: 70%;
+}
+.septima {
+	left: 50%;
+	top: 80%;
+}
+.octava1 {
+    width: 8px;
+	height: 8px;
+	left: 20%;
+	top: 80%;
+    background: rgba(217, 255, 0, 0.767);
+    -webkit-animation: estrella-par 2s infinite;
+}
+.octava1:hover{
+    animation-play-state: paused;
+}
+
+@-webkit-keyframes estrella-impar {
+	0%, 80% {
+		box-shadow: none;
+	}
+
+	100% {
+		box-shadow: 0 0 10px 10px rgba(255,255,255,.3);
+	}
+}
+
+@-webkit-keyframes estrella-par {
+	0%, 40%, 80%{
+		box-shadow: none;
+	}
+
+	60% {
+		box-shadow: 0 0 10px 10px rgba(255,255,255,.3);
+	}
+}
+.sol {
+    width: 100%;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    background: rgb(207, 207, 212);
+    box-shadow: 0 0 60px gold, 0 0 100px #b9a018, inset 0 5px 35px 53px #dbdbdb, inset 48px 8px 34px 25px #c4c4c4;
+    left: 100px;
+    top: 100px;
+    position: absolute;
+    animation: sunFreakOut 3s infinite linear forwards;
+}
+@keyframes sunFreakOut {
+    0%, 100% {
+      box-shadow: 0 0 60px rgb(255, 153, 0), 0 0 100px #b9a018, inset 0 5px 35px 53px #ffffffa9, inset 48px 8px 34px 25px #c4c4c4;
+    }
+    50%, 70% {
+      box-shadow: 0 0 50px gold, 0 0 0px gold, inset 0 5px 35px 53px #dab51365, inset 48px 8px 34px 25px #c4c4c4;
+    }
+  }
+  
