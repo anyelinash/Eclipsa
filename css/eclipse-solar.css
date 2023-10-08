@@ -2,16 +2,19 @@
     box-sizing: border-box;
   }
   
-  
-  body{
+  .container{
+    width: auto;
+    height: 600px;
     animation: 10s linear light infinite;
     
     &:after{
       content: '';
       position: absolute;
       left: 0%;
-      top: 50%;
-      @include cl(2px);
+      top: 25%;
+      width:2px;
+      height:2px;
+      border-radius:50%;
       color: #fff;
       background: currentcolor;
       box-shadow: 30px -100px , 50px -30px , 100px -140px , 180px -240px , 
@@ -24,7 +27,7 @@
       content: '';
       position: absolute;
       right: 0%;
-      top: 20%;
+      top: 10%;
       width:2px;
       height:2px;
       border-radius:50%;

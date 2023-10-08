@@ -8,7 +8,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
-  <style>
+    <link rel="stylesheet" href="css/planetas.css">
+ <style>
     .fondo-con-imagen {
       background-image: url("@/assets/img/part.svg");
       background-size: cover;
@@ -20,7 +21,7 @@
     .alinear {
       display: flex;
       align-items: center;
-      height: 500px;
+      height: 600px;
     }
 
     .display-4 {
@@ -196,7 +197,23 @@
 </head>
 
 <body>
-<div class="p-4 p-md-5 mb-4 text-bg-dark alinear fondo-con-imagen"></div>
+<div class="p-4 p-md-5 mb-4 text-bg-dark alinear fondo-con-imagen">
+  <div class="container">
+    <ul class="solarsystem">
+      <li class="sun"><a href="#sun"><span>Sun</span></a></li>
+      <li class="mercury"><a href="#mercury"><span>Mercury</span></a></li>
+      <li class="venus"><a href="#venus"><span>Venus</span></a></li>
+      <li class="earth"><a href="#earth"><span>Earth<span class="moon"> &amp; Moon</span></span></a></li>
+      <li class="mars"><a href="#mars"><span>Mars</span></a></li>
+      <li class="asteroids_meteorids"><span>Asteroids &amp; Meteorids</span></li>
+      <li class="jupiter"><a href="#jupiter"><span>Jupiter</span></a></li>
+      <li class="saturn"><a href="#saturn"><span>Saturn &amp; <span class="ring">Ring</span></span></a></li>
+      <li class="uranus"><a href="#uranus"><span>Uranus</span></a></li>
+      <li class="neptune"><a href="#neptune"><span>Neptune</span></a></li>
+      <li class="pluto"><a href="#pluto"><span>Pluto</span></a></li>
+    </ul>
+  </div>
+</div>
   <div class="container marketing">
     <div class="row featurette">
       <div class="row featurette justify-content-center text-center">

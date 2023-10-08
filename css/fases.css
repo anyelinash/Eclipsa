@@ -1,6 +1,8 @@
-body {
-    background: #BBDEFB;
-    animation: sky 20s infinite linear;
+.container {
+  width: auto;
+  height: 500px;
+  background: #BBDEFB;
+  animation: sky 20s infinite linear;
   }
   
   .blobs{
@@ -57,7 +59,7 @@ body {
     position:fixed;
     background: linear-gradient(90deg,#fff, #ECEFF1, #CFD8DC, #263238, #263238, #CFD8DC, #ECEFF1, #fff);
     background-size: 1000% 1000%;
-    top:50%;
+    top:25%;
     width:100px;
     height:100px;
     line-height:100px;
