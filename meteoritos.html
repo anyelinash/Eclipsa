@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        .fondo-con-imagen {
+            background-image: url('/img/meteor.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+        }
+
+        .alinear {
+            display: flex;
+            align-items: center;
+            height: 500px;
+        }
+
+        .custom-button {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 20px;
+            background-color: #474d89;
+            color: white;
+            text-decoration: none;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .custom-button:hover {
+            box-shadow: 0 4px 8px #474d89;
+        }
+
+        .display-4 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        /*carrusel*/
+
+        .slide-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: auto;
+            width: 100%;
+            padding: 40px 0 0 0;
+        }
+
+        .slide-content {
+            margin: 0 40px;
+        }
+
+        .pcard {
+            width: 240px;
+            height: 100%;
+            border-radius: 25px;
+            background-color: #FFF;
+            margin-right: 30px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            padding: 0;
+
+        }
+
+        .image-content,
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 14px;
+        }
+
+        .image-content {
+            position: relative;
+            row-gap: 5px;
+            padding: 25px 0 5px 0;
+        }
+
+
+        .overlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #080115;
+            border-radius: 25px 25px 0 25px;
+        }
+
+        .overlay::before,
+        .overlay::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: -40px;
+            height: 40px;
+            width: 40px;
+            background-color: #080115;
+        }
+
+        .overlay::after {
+            border-radius: 0 25px 0 0;
+            background-color: #fff;
+        }
+
+        .card-image {
+            position: relative;
+            height: 150px;
+            width: 150px;
+        }
+
+        .card-image .card-img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .card-content {
+            width: 100%;
+            text-align: center;
+        }
+
+        .name {
+            font-size: 20px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .description {
+            font-size: 16px;
+            color: #707070;
+            text-align: center;
+        }
+
+        /*pie de pagina*/
+        .pie-pagina {
+            margin-top: 3.5rem;
+            width: 100%;
+            background-color: #4D4443;
+        }
+
+        .pie-pagina .grupo-1 {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 50px;
+            padding: 45px 0px;
+        }
+
+        .pie-pagina .grupo-1 .box figure {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pie-pagina .grupo-1 .box img {
+            width: 200px;
+        }
+
+        .pie-pagina .grupo-1 .box h2 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 20px;
+        }
+
+        .pie-pagina .grupo-1 .box p {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .pie-pagina .grupo-1 .red-social a {
+            display: inline-block;
+            text-decoration: none;
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            color: white;
+            margin-right: 13px;
+            background-color: #72615F;
+            text-align: center;
+            border-radius: 10px;
+            transition: all 300ms ease;
+        }
+
+        .pie-pagina .grupo-1 .red-social a:hover {
+            color: #b5cae6;
+        }
+
+        .pie-pagina .grupo-2 {
+            background-color: #62504E;
+            padding: 15px 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .pie-pagina .grupo-2 small {
+            font-size: 15px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="p-4 p-md-5 mb-4 text-bg-dark alinear fondo-con-imagen">
+        <div></div>
+        <div class="col-md-6 px-0" style="color: rgb(48, 45, 45);">
+        </div>
+    </div>
+    <div class="container marketing">
+        <div class="row featurette">
+            <div class="col-md-12 align-items-center">
+                <h2 class="featurette-heading fw-normal lh-1" style="margin-top: 2.5rem; text-align: center;font-size: 50px;">
+                    <b>METEORITOS</b>
+                </h2>
+                <div class="row featurette">
+                    <div class="col-md-14 align-items-center">
+                        
+                        <p class="lead">
+                            Todos están relacionados con los destellos de luz llamados "estrellas fugaces" que a veces se ven cruzando el cielo. 
+                            Pero llamamos al mismo objeto con diferentes nombres, dependiendo de dónde se encuentre.
+ 
+                        </p>
+                    </div> <h2 class="featurette-heading fw-normal lh-1" style="margin-top: 2.5rem; text-align: center;">
+                            <b>¿QUÉ DIFERENCIA EXISTE ENTRE METEOROIDES, METEORO Y METEORITOS?</b>
+                        </h2>
+                </div>
+                <div class="slide-container">
+                    <div class="slide-content">
+                        <div class="card-wrapper row">
+                            <div class="pcard col-md-3 mb-4">
+                                <div class="image-content">
+                                    <span class="overlay"></span>
+                                    <div class="card-image">
+                                        <img src="img/meteoritos/meteoreode.jpg" alt="Descripción de la imagen" class="card-img">
+                                    </div>
+                                </div>
+
+                                <div class="card-content">
+                                    <h2 class="name">Meteoroides</h2>
+                                    <p class="description">Objetos en el espacio que varían en tamaño desde granos de polvo hasta pequeños asteroides.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="pcard col-md-3 mb-4">
+                                <div class="image-content">
+                                    <span class="overlay"></span>
+                                    <div class="card-image">
+                                        <img src="img/meteoritos/meteoro.jpeg" alt="Descripción de la imagen" class="card-img">
+                                    </div>
+                                </div>
+
+                                <div class="card-content">
+                                    <h2 class="name">Meteoros</h2>
+                                    <p class="description">Cuando los meteoroides entran en la atmósfera terrestre (o en la de otro planeta, como Marte) a gran velocidad y se queman, las bolas de fuego o “estrellas fugaces” se llaman meteoros.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="pcard col-md-3 mb-4">
+                                <div class="image-content">
+                                    <span class="overlay"></span>
+                                    <div class="card-image">
+                                        <img src="img/meteoritos/meteoritos.jfif" alt="Descripción de la imagen" class="card-img">
+                                    </div>
+                                </div>
+
+                                <div class="card-content">
+                                    <h2 class="name">Meteoritos</h2>
+                                    <p class="description">Cuando un meteorito sobrevive a un viaje a través de la atmósfera y choca contra el suelo, se llama meteorito.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row featurette">
+                    <div class="col-md-14 align-items-center">
+                        <h2 class="featurette-heading fw-normal lh-1" style="margin-top: 2.5rem">
+                            <b>¿Cuando ocurre una lluvia de meteoritos?</b>
+                        </h2>
+                        <p class="lead">
+                            Las lluvias de meteoritos ocurren anualmente o a intervalos regulares cuando la Tierra atraviesa el rastro de escombros polvorientos dejados por un cometa.	
+                            <br /> Los científicos estiman que alrededor de 48,5 toneladas (44 toneladas o 44.000 kilogramos) de material meteorítico caen sobre la Tierra cada día. Casi todo el material se vaporiza en la atmósfera terrestre, dejando un rastro brillante llamado cariñosamente "estrellas fugaces".
+
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <footer class="pie-pagina">
+    <div class="grupo-2">
+        <small> &copy; 2023 <b>FitHub</b> - Todos los Derechos Reservados.</small>
+    </div>
+</footer>
+
+    </body>
+
+
+</html>
+
+    
+    

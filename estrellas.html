@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        .fondo-con-imagen {
+            background-image: url('img/back.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+        }
+        
+
+        .alinear {
+            display: flex;
+            align-items: center;
+            height: 500px;
+        }
+
+        .custom-button {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 20px;
+            background-color: #474d89;
+            color: white;
+            text-decoration: none;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        .custom-button:hover {
+            box-shadow: 0 4px 8px #474d89;
+        }
+
+        .display-4 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        /*carrusel*/
+
+        .slide-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: auto;
+            width: 100%;
+            padding: 40px 0 0 0;
+        }
+
+        .slide-content {
+            margin: 0 40px;
+        }
+
+        .pcard {
+            width: 240px;
+            height: 100%;
+            border-radius: 25px;
+            background-color: #FFF;
+            margin-right: 30px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            padding: 0;
+
+        }
+
+        .image-content,
+        .card-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 14px;
+        }
+
+        .image-content {
+            position: relative;
+            row-gap: 5px;
+            padding: 25px 0 5px 0;
+        }
+
+
+        .overlay {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #000000;
+            border-radius: 25px 25px 0 25px;
+        }
+
+        .overlay::before,
+        .overlay::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: -40px;
+            height: 40px;
+            width: 40px;
+            background-color: #000000;
+        }
+
+        .overlay::after {
+            border-radius: 0 25px 0 0;
+            background-color: #fff;
+        }
+
+        .card-image {
+            position: relative;
+            height: 150px;
+            width: 150px;
+        }
+
+        .card-image .card-img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .card-content {
+            width: 100%;
+            text-align: center;
+        }
+
+        .name {
+            font-size: 20px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .description {
+            font-size: 16px;
+            color: #707070;
+            text-align: center;
+        }
+
+        /*pie de pagina*/
+        .pie-pagina {
+            margin-top: 3.5rem;
+            width: 100%;
+            background-color: #4D4443;
+        }
+
+        .pie-pagina .grupo-1 {
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 50px;
+            padding: 45px 0px;
+        }
+
+        .pie-pagina .grupo-1 .box figure {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pie-pagina .grupo-1 .box img {
+            width: 200px;
+        }
+
+        .pie-pagina .grupo-1 .box h2 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 20px;
+        }
+
+        .pie-pagina .grupo-1 .box p {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .pie-pagina .grupo-1 .red-social a {
+            display: inline-block;
+            text-decoration: none;
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            color: white;
+            margin-right: 13px;
+            background-color: #72615F;
+            text-align: center;
+            border-radius: 10px;
+            transition: all 300ms ease;
+        }
+
+        .pie-pagina .grupo-1 .red-social a:hover {
+            color: #b5cae6;
+        }
+
+        .pie-pagina .grupo-2 {
+            background-color: #62504E;
+            padding: 15px 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .pie-pagina .grupo-2 small {
+            font-size: 15px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="p-4 p-md-5 mb-4 text-bg-dark alinear fondo-con-imagen">
+
+        <div class="col-md-6 px-0" style="color: rgb(250, 247, 247);">
+            
+        </div>
+    </div>
+    <div class="container marketing">
+        <div class="row featurette">
+            <div class="col-md-12 align-items-center">
+                <h2 class="featurette-heading fw-normal lh-1" style="margin-top: 2.5rem; text-align: center;font-size: 50px;">
+                    <b>ESTRELLAS</b>
+                </h2>
+                <div class="row featurette">
+                    <div class="col-md-14 align-items-center">
+                        
+                        <p class="lead">
+                            Esfera de gas en un estado de equilibrio entre la gravedad que tiende a comprimirla y la presión 
+                            del gas, que tiende a que se expanda. Las estrellas liberan energía en su interior mediante reacciones 
+                            termonucleares.	
+                            
+                            <br />Earendel (estrella enorme) tiene al menos 50 veces la masa de nuestro Sol y es millones de veces más brillante. Su brillo se magnifica mil veces o más
+                            gracias a la rara alineación con el cúmulo de galaxias que sirven de lente de aumento.
+
+                            <br />La NASA captura el flujo supersónico de una estrella joven. Los objetos Herbig-Haro (HH) son regiones luminosas que rodean estrellas recién nacidas, formadas cuando los vientos estelares o chorros de gas que arrojan estas estrellas recién nacidas forman ondas de choque que chocan con gas y polvo cercanos a altas velocidades.
+
+ 
+                        </p>
+                    </div>
+                </div><h2 class="featurette-heading fw-normal lh-1" style="margin-top: 2.5rem">
+                    <b>¿CUÁNTOS TIPOS DE ESTRELLAS EXISTEN?</b>
+                </h2>
+                <p class="lead" style="margin-top: 1rem;">
+                    <b>Según describe Universe Exploration de la NASA, podemos clasificar a las estrellas en cinco grandes tipos:</b>
+                </p>
+                <div class="slide-container">
+                    <div class="slide-content">
+                        <div class="card-wrapper row">
+                            <div class="pcard col-md-3 mb-4">
+                                <div class="image-content">
+                                    <span class="overlay"></span>
+                                    <div class="card-image">
+                                        <img src="/img/gigante roja.jpg" alt="Descripción de la imagen" class="card-img">
+                                    </div>
+                                </div>
+
+                                <div class="card-content">
+                                    <h2 class="name">Gigantes Rojas</h2>
+                                    <p class="description">Evolución de estrellas de masa baja e intermedia, como nuestro Sol.
+                                        </p>
+                                </div>
+                            </div>
+                            <div class="pcard col-md-3 mb-4">
+                                <div class="image-content">
+                                    <span class="overlay"></span>
+                                    <div class="card-image">
+                                        <img src="img/estrella enana blanca.jpg" alt="Descripción de la imagen" class="card-img">
+                                    </div>
+                                </div>
+
+                                <div class="card-content">
+                                    <h2 class="name">Enanas Blancase</h2>
+                                    <p class="description">Estrellas muy pequeñas y calientes, pero de masas comparables a la del Sol.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="pcard col-md-3 mb-4">
+                                <div class="image-content">
+                                    <span class="overlay"></span>
+                                    <div class="card-image">
+                                        <img src="img/estrella de neutrones.jpg" alt="Descripción de la imagen" class="card-img">
+                                    </div>
+                                </div>
+
+                                <div class="card-content">
+                                    <h2 class="name">Estrellas de neutrones</h2>
+                                    <p class="description">Son remanentes estelares que han alcanzado el fin de su viaje evolutivo a través del espacio y el tiempo.</p>
+                                </div>
+                            </div>
+                            <div class="pcard col-md-3 mb-4" style="margin-right:0">
+                                <div class="image-content">
+                                    <span class="overlay"></span>
+                                    <div class="card-image">
+                                        <img src="img/estrella enana roja.jpg" alt="Descripción de la imagen" class="card-img">
+                                    </div>
+                                </div>
+
+                                <div class="card-content">
+                                    <h2 class="name">Enanas Rojas</h2>
+                                    <p class="description">Estrellas más frías de la secuencia principal y con la luminosidad más débil. 
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <footer class="pie-pagina">
+    
+    <div class="grupo-2">
+        <small> &copy; 2023 <b>FitHub</b> - Todos los Derechos Reservados.</small>
+    </div>
+</footer>
+
+    </body>
+
+
+</html>

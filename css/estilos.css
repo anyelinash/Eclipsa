@@ -9,7 +9,34 @@ body{
     width: 35px;
     background: url('/img/satelite.png') no-repeat center center;
     background-size: cover;
+    color: white;
+    font-size: 14px;
   }
+  .satelite:hover::before {
+    content: "Un objeto que gira alrededor de otro objeto.";
+    font-size: 12px;
+    font-style: italic;
+    position: absolute; 
+    right: -230px; 
+    top: 50%; 
+    transform: translateY(-50%);
+  }
+  
+  .satelite .ver-mas {
+    display: none; 
+  }
+
+  .satelite:hover .ver-mas {
+    display: inline;
+    font-size: 12px;
+    font-weight: bold;
+    color: #c4c4c4;
+    position: absolute; 
+    right: -40px; 
+    top: calc(50% + 9px); 
+    cursor: pointer;
+  }
+  
 
 .luna {
     width: 70px;
@@ -17,49 +44,39 @@ body{
     position: absolute;
     border-radius: 50%;
     background: url(../img/mapaluna.png);
-    background-size: cover;}
-    .luna::before,
-    .luna::after {
-        content: "";
-        display: none; 
-        position: absolute;
-        top: 0;
-    }
-    .luna::before {
-        left: 80px; 
-        background-color: rgba(255, 68, 68, 0.7); 
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        text-align: center;
-        line-height: 30px;
-        color: white;
-        font-weight: bold;
-        content: "";
-    }
-    .luna::after {
-        left: 80px;
-        top: 40px; 
-        background-color: rgba(0, 0, 255, 0.7); 
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        text-align: center;
-        line-height: 30px;
-        color: white;
-        font-weight: bold;
-        content: "";
-    }
-    
-    .luna:hover::before,
-    .luna:hover::after {
-        display: block; /* Muestra los botones al pasar el ratón */
-    }
+    background-size: cover;
+    color: white;
+    font-size: 14px;
+  }
+  .luna:hover::before {
+    content: "Astro, satélite natural de la Tierra, que gira alrededor de ella y refleja la luz del Sol";
+    font-size: 12px;
+    font-style: italic;
+    position: absolute; 
+    text-align: center;
+    right: 70px; 
+    top: 45%; 
+    transform: translateY(-50%);
+  }
+  
+  .luna .ver-mas {
+    display: none; 
+  }
 
+  .luna:hover .ver-mas {
+    display: inline;
+    font-size: 12px;
+    font-weight: bold;
+    color: #c4c4c4;
+    position: absolute; 
+    right: -40px; 
+    top: calc(50% + 15px); 
+    cursor: pointer;
+  }
 .tierra {
     width: 150px;
     height: 150px;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
@@ -71,7 +88,35 @@ body{
                 0px 0px 0 0 rgba(255, 255, 255, .2) inset;
     background: url(../img/mapa.png);
     background-size: cover;
-    animation: tierra-girando 5s infinite linear; /* Combina ambas animaciones */}
+    animation: tierra-girando 5s infinite linear; 
+    background-size: cover;
+    color: white;
+    font-size: 14px;
+  }
+  .tierra:hover::before {
+    content: "Cuerpo celeste que gira alrededor de una estrella y no emite luz propia";
+    font-size: 12px;
+    font-style: italic;
+    position: absolute; 
+    right: -370px; 
+    top: 50%; 
+    transform: translateY(-50%);
+  }
+  
+  .tierra .ver-mas {
+    display: none; 
+  }
+
+  .tierra:hover .ver-mas {
+    display: inline;
+    font-size: 12px;
+    font-weight: bold;
+    color: #c4c4c4;
+    position: absolute; 
+    right: -45px; 
+    top: calc(50% + 9px); 
+    cursor: pointer;
+  }
 
 @keyframes tierra-girando {
     0% {
@@ -105,7 +150,33 @@ body{
     background: url('/img/cometa.png') no-repeat center center;
     background-size: cover;
     animation: moverCometa 10s infinite linear;
-}
+    color: white;
+    font-size: 14px;}
+
+    .cometa:hover::before {
+        content: "Objetos en el espacio que varían en tamaño desde granos de polvo hasta pequeños asteroides.";
+        font-size: 12px;
+        font-style: italic;
+        position: absolute; 
+        text-align: center;
+        right: 70px; 
+        top: 45%; 
+        transform: translateY(-50%);
+      }
+      
+      .cometa .ver-mas {
+        display: none; 
+      }
+    
+      .cometa:hover .ver-mas {
+        display: inline;
+        font-size: 12px;
+        font-weight: bold;
+        position: absolute; 
+        right: -40px; 
+        top: calc(50% + 15px); 
+        cursor: pointer;
+      }
 .cometa:hover {
     animation-play-state: paused;
 }
@@ -162,7 +233,38 @@ body{
 	top: 80%;
     background: rgba(217, 255, 0, 0.767);
     -webkit-animation: estrella-par 2s infinite;
-}
+    color: white;
+    font-size: 14px;
+  }
+  .w{
+    width: 20px;
+    height: 20px;
+  }
+  .octava1:hover::before {
+    content: "Motores de energía cósmica que producen rayos ultravioleta, rayos X y otras formas de radiación.";
+    font-size: 12px;
+    font-style: italic;
+    position: absolute; 
+    right: 30px; 
+    top: 5%; 
+    transform: translateY(-50%);
+  }
+  
+  .octava1 .ver-mas {
+    display: none; /* Ocultar inicialmente */
+  }
+
+  .octava1:hover .ver-mas {
+    display: inline;
+    font-size: 12px;
+    font-weight: bold;
+    color: #c4c4c4;
+    position: absolute; 
+    right: -40px; 
+    top: calc(50% + 9px); 
+    cursor: pointer;
+  }
+
 .octava1:hover{
     animation-play-state: paused;
 }
@@ -197,7 +299,33 @@ body{
     top: 100px;
     position: absolute;
     animation: sunFreakOut 3s infinite linear forwards;
-}
+    color: white;
+    font-size: 14px;
+  }
+  .sol:hover::before {
+    content: "Un evento celestial que cambia drásticamente la apariencia de los dos objetos más grandes que vemos en nuestro cielo. Cuando la Tierra, la Luna y el Sol se alinean.";
+    font-size: 12px;
+    font-style: italic;
+    position: absolute; 
+    right: -220px; 
+    top: 45%; 
+    transform: translateY(-50%);
+  }
+  
+  .sol .ver-mas {
+    display: none; /* Ocultar inicialmente */
+  }
+
+  .sol:hover .ver-mas {
+    display: inline; /* Mostrar al hacer hover en la luna */
+    font-size: 12px;
+    font-weight: bold;
+    color: #c4c4c4;
+    position: absolute; 
+    right: -40px; 
+    top: calc(50% + 15px); 
+    cursor: pointer;
+  }
 @keyframes sunFreakOut {
     0%, 100% {
       box-shadow: 0 0 60px rgb(255, 153, 0), 0 0 100px #b9a018, inset 0 5px 35px 53px #ffffffa9, inset 48px 8px 34px 25px #c4c4c4;
@@ -205,5 +333,4 @@ body{
     50%, 70% {
       box-shadow: 0 0 50px gold, 0 0 0px gold, inset 0 5px 35px 53px #dab51365, inset 48px 8px 34px 25px #c4c4c4;
     }
-  }
-  
+}
